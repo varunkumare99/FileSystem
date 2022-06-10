@@ -175,6 +175,7 @@ int allocate_file(const char *fileName){
     return currInode;
 }
 
+// used when file size is to be reduced
 void shorten_file (int block_number) {
     int next_block_num = dbs[block_number].next_block_num;
     if (next_block_num >= 0) {
